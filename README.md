@@ -12,25 +12,28 @@
 
 ## 项目结构
 
+项目采用模块化、工程化的目录结构，参考 [anthropics/skills](https://github.com/anthropics/skills) 项目的组织方式。
+
 ```
 CityManagementGame/
-├── package.json                 # 项目依赖配置
-├── tsconfig.json               # TypeScript配置
-├── vite.config.ts              # Vite构建配置
-├── tailwind.config.js          # Tailwind CSS配置
-├── index.html                  # 入口HTML
 ├── src/
-│   ├── main.tsx                # 应用入口
-│   ├── App.tsx                 # 根组件
-│   ├── config/                 # 配置文件
-│   ├── types/                  # 类型定义
-│   ├── services/               # 服务层
+│   ├── core/                   # 核心业务逻辑
+│   │   ├── constants/          # 常量定义
+│   │   ├── types/              # TypeScript 类型定义
+│   │   ├── config/             # 应用配置
+│   │   └── managers/           # 管理器类
+│   ├── services/               # 服务层（Firebase、游戏服务）
 │   ├── hooks/                  # React Hooks
-│   ├── components/             # UI组件
+│   ├── components/             # UI 组件（按功能模块组织）
 │   ├── utils/                  # 工具函数
 │   └── styles/                 # 样式文件
-└── public/                     # 静态资源
+├── public/assets/              # 静态资源（图片、音频、图标）
+├── docs/                       # 项目文档
+├── tests/                      # 测试文件
+└── config/                     # 工具配置文件
 ```
+
+详细结构说明请查看 [docs/PROJECT_STRUCTURE.md](./docs/PROJECT_STRUCTURE.md)
 
 ## 安装依赖
 
